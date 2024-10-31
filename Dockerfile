@@ -11,4 +11,4 @@ COPY target/news-microservice-*.jar app.jar
 EXPOSE 8080
 
 # Comando para executar o aplicativo
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "/app.jar"]
