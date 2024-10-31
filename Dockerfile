@@ -1,4 +1,4 @@
-FROM openjdk:21-jre-slim AS build
+FROM amazoncorretto:21-alpine3.19-jdk AS build
 WORKDIR /app
 COPY . .
 RUN mvn clean package -DskipTests
