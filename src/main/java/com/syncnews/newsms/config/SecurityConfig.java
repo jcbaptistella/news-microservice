@@ -44,6 +44,7 @@ public class SecurityConfig {
         http
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers(HttpMethod.POST, "/users").permitAll()
+                        .requestMatchers("/actuator/health").permitAll()
                         .requestMatchers(HttpMethod.POST, "/oauth/token").permitAll()
                         .anyRequest().authenticated())
                 .csrf(AbstractHttpConfigurer::disable)
