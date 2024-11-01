@@ -15,7 +15,7 @@ public class TokenController {
     private final GetTokenUseCase getTokenUseCase;
 
     @PostMapping("/token")
-    @CrossOrigin
+    @CrossOrigin(origins = "https://news-b8d1c.web.app/")
     public ResponseEntity<LoginResponse> getToken(@RequestBody LoginRequest loginRequest) {
         final LoginResponse response = getTokenUseCase.execute(loginRequest);
         return ResponseEntity.ok(response);
